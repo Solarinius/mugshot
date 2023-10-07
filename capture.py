@@ -5,7 +5,7 @@ from pathlib import Path
 cam = VideoCapture(0,CAP_DSHOW) # initialize the camera 
 
 def getPhoto(camera:VideoCapture):
-    result, image = cam.read()
+    result, image = camera.read()
     if result:
         path = Path.home() / "Pictures/MugShots/"
         if (not Path.exists(path)):

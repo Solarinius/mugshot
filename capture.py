@@ -17,7 +17,7 @@ def getPhoto(camera:VideoCapture):
 
         imwrite(name, image) #save mugshot
     else:
-        with(open(f"{path}/access.log",'w')) as f:
+        with(open(f"{path}/access.log",'a')) as f:
             f.write(f"Someone tried at {now}, but no image")
 
 if __name__ == "__main__":
